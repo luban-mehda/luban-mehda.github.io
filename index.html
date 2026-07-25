@@ -89,6 +89,11 @@
     opacity:0.6;
   }
   .hero-inner{position:relative; z-index:2; max-width:1180px; margin:0 auto; width:100%;}
+  .hero-layout{display:grid; grid-template-columns:1.3fr 0.8fr; gap:56px; align-items:center;}
+  @media (max-width:900px){.hero-layout{grid-template-columns:1fr;}}
+  .hero-photo{border:1px solid rgba(255,255,255,0.22); background:rgba(255,255,255,0.03);}
+  .hero-photo img{width:100%; aspect-ratio:4/5; object-fit:cover; display:block;}
+  .hero-photo figcaption{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--accent-soft); padding:10px 14px; border-top:1px solid rgba(255,255,255,0.18); letter-spacing:0.04em;}
   .eyebrow{
     font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:0.14em;
     color:var(--accent-soft); text-transform:uppercase; margin-bottom:22px;
@@ -303,7 +308,8 @@
   <div class="nav-mark">MLM<span>.</span>CV</div>
   <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">MENU</button>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -316,6 +322,8 @@
 <!-- SHEET 1 — HERO -->
 <header class="hero" id="top">
   <div class="hero-inner">
+    <div class="hero-layout">
+    <div>
     <div class="eyebrow">Dwg No. 001 — Curriculum Vitae</div>
     <h1 class="display">Md Luban<br><em>Mehda</em></h1>
     <p class="hero-sub">Incoming PhD student in Mechanical Engineering at Iowa State University, working on fluid mechanics, advanced manufacturing, and materials.</p>
@@ -328,56 +336,38 @@
       <a class="pill" href="https://www.researchgate.net/profile/Md-Luban-Mehda" target="_blank" rel="noopener">ResearchGate</a>
     </div>
 
-    <div class="titleblock">
-      <div class="titleblock-row">
-        <div class="titleblock-cell">
-          <span class="titleblock-label">Incoming</span>
-          <span class="titleblock-value">PhD, Mechanical Engineering — Iowa State University</span>
-        </div>
-        <div class="titleblock-cell">
-          <span class="titleblock-label">Start</span>
-          <span class="titleblock-value">Fall 2026 (Aug 2026)</span>
-        </div>
-      </div>
-      <div class="titleblock-row">
-        <div class="titleblock-cell">
-          <span class="titleblock-label">Funding</span>
-          <span class="titleblock-value">Graduate Teaching Assistantship</span>
-        </div>
-        <div class="titleblock-cell">
-          <span class="titleblock-label">Rev.</span>
-          <span class="titleblock-value">Updated Jul 2026</span>
-        </div>
-      </div>
+    </div>
+
+    <figure class="hero-photo">
+      <img src="images/headshot.jpg" alt="Md Luban Mehda, professional headshot">
+      <figcaption>Fig. 01 — Portrait</figcaption>
+    </figure>
     </div>
   </div>
 </header>
 
-<!-- SHEET 2 — ABOUT -->
-<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 02</b> / 09 — About</span><div class="line"></div></div>
-<section id="about">
-  <h2 class="section-title display">Research interests</h2>
-  <p class="section-lede">A snapshot of where my work sits and who I am outside the lab.</p>
+<!-- SHEET 2 — EDUCATION -->
+<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 02</b> / 10 — Education</span><div class="line"></div></div>
+<section id="education">
+  <h2 class="section-title display">Education</h2>
+  <p class="section-lede">Two institutions, one continuous thread of mechanical engineering.</p>
 
   <div class="about-grid">
     <div>
-      <p>I'm an incoming PhD student in Mechanical Engineering at Iowa State University, joining as a Graduate Teaching Assistant in Fall 2026. My background spans simulation and materials science — from supersonic particle dynamics in cold spray, to molecular-scale sintering of nanocomposites, to system-level thermal modelling in vehicles. I'm drawn to problems where multi-scale modelling — atoms to airflow — has to meet a physical manufacturing process.</p>
-      <p style="margin-top:14px; color:var(--ink-soft); font-size:0.95rem;"><strong style="color:var(--ink);">Education —</strong> B.Sc. in Mechanical Engineering, Bangladesh University of Engineering and Technology (BUET), Jan 2022 – Jun 2026.</p>
-
-      <ul class="interest-list">
-        <li><span class="interest-num">01</span> Fluid mechanics</li>
-        <li><span class="interest-num">02</span> Advanced manufacturing</li>
-        <li><span class="interest-num">03</span> Materials</li>
-      </ul>
+      <div class="item-row" style="border-top:1px solid var(--paper-line); padding-top:18px;">
+        <div class="title" style="font-size:1.15rem;">PhD, Mechanical Engineering</div>
+        <span class="meta">Incoming — Fall 2026 (Aug 2026)</span>
+        <p>Iowa State University, Ames, IA, USA — Graduate Teaching Assistantship.</p>
+      </div>
+      <div class="item-row">
+        <div class="title" style="font-size:1.15rem;">B.Sc., Mechanical Engineering</div>
+        <span class="meta">Jan 2022 – Jun 2026</span>
+        <p>Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh.</p>
+      </div>
     </div>
 
     <div>
-      <div class="photo-frame" style="border:none; background:none; padding:0; aspect-ratio:auto;">
-        <img src="images/headshot.jpg" alt="Md Luban Mehda, professional headshot" style="width:100%; aspect-ratio:4/5; object-fit:cover; display:block;">
-      </div>
-      <p class="photo-caption">Fig. 01 — Portrait</p>
-
-      <div style="margin-top:18px; border:1px solid var(--paper-line); background:var(--white);">
+      <div style="border:1px solid var(--paper-line); background:var(--white);">
         <img src="images/thesis-submission.jpg" alt="Md Luban Mehda holding his submitted undergraduate thesis outside the BUET Department of Mechanical Engineering" style="width:100%; display:block;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); padding:9px 12px; border-top:1px solid var(--paper-line);">Fig. 02 — Undergraduate thesis submission, BUET ME</div>
       </div>
@@ -385,11 +375,46 @@
   </div>
 </section>
 
-<!-- SHEET 3 — RESEARCH EXPERIENCE -->
-<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 03</b> / 09 — Research experience</span><div class="line"></div></div>
+<!-- SHEET 3 — PROFESSIONAL EXPERIENCE -->
+<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 03</b> / 10 — Professional experience</span><div class="line"></div></div>
+<section id="experience">
+  <h2 class="section-title display">Professional experience</h2>
+  <p class="section-lede">Teaching and industry roles alongside my research.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <span class="tl-date">Incoming — Fall 2026</span>
+      <div class="tl-title">Graduate Teaching Assistant</div>
+      <div class="tl-org">Department of Mechanical Engineering, Iowa State University</div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-date">Mar 2025</span>
+      <div class="tl-title">Industrial Trainee</div>
+      <div class="tl-org">North-West Power Generation Company Limited (NWPGCL)</div>
+      <ul>
+        <li>Bheramara 410 MW Combined Cycle Power Plant — gas–steam turbine coordination, instrumentation, and troubleshooting.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SHEET 4 — RESEARCH EXPERIENCE -->
+<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 04</b> / 10 — Research</span><div class="line"></div></div>
 <section id="research">
-  <h2 class="section-title display">Research experience</h2>
-  <p class="section-lede">Three active lines of research, chronologically ordered.</p>
+  <h2 class="section-title display">Research interests</h2>
+  <p class="section-lede">Where my work sits, and the projects that have grown out of it.</p>
+
+  <div style="max-width:720px; margin-bottom:56px;">
+    <p>I'm an incoming PhD student in Mechanical Engineering at Iowa State University, joining as a Graduate Teaching Assistant in Fall 2026. My background spans simulation and materials science — from supersonic particle dynamics in cold spray, to molecular-scale sintering of nanocomposites, to system-level thermal modelling in vehicles. I'm drawn to problems where multi-scale modelling — atoms to airflow — has to meet a physical manufacturing process.</p>
+
+    <ul class="interest-list">
+      <li><span class="interest-num">01</span> Fluid mechanics</li>
+      <li><span class="interest-num">02</span> Advanced manufacturing</li>
+      <li><span class="interest-num">03</span> Materials</li>
+    </ul>
+  </div>
+
+  <h3 class="mono" style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:24px;">Research experience</h3>
 
   <div class="timeline">
     <div class="tl-item">
@@ -434,7 +459,7 @@
 </section>
 
 <!-- SHEET 4 — PUBLICATIONS -->
-<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 04</b> / 09 — Publications</span><div class="line"></div></div>
+<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 05</b> / 10 — Publications</span><div class="line"></div></div>
 <section id="publications">
   <h2 class="section-title display">Publications</h2>
   <p class="section-lede">Journal manuscripts in preparation and conference proceedings.</p>
@@ -484,7 +509,7 @@
 </section>
 
 <!-- SHEET 5 — PROJECTS -->
-<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 05</b> / 09 — Projects</span><div class="line"></div></div>
+<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 06</b> / 10 — Projects</span><div class="line"></div></div>
 <section id="projects">
   <h2 class="section-title display">Selected projects</h2>
   <p class="section-lede">Hands-on builds spanning controls, robotics, and thermal-fluid systems.</p>
@@ -546,7 +571,7 @@
 </section>
 
 <!-- SHEET 6 — SKILLS -->
-<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 06</b> / 09 — Technical skills</span><div class="line"></div></div>
+<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 07</b> / 10 — Technical skills</span><div class="line"></div></div>
 <section id="skills">
   <h2 class="section-title display">Technical skills</h2>
   <table class="skill-table">
@@ -558,7 +583,7 @@
 </section>
 
 <!-- SHEET 7 — ACHIEVEMENTS & LEADERSHIP -->
-<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 07</b> / 09 — Achievements &amp; leadership</span><div class="line"></div></div>
+<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 08</b> / 10 — Achievements &amp; leadership</span><div class="line"></div></div>
 <section id="achievements">
   <div class="two-col">
     <div>
@@ -625,7 +650,7 @@
     </figure>
   </div>
 </section>
-<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 08</b> / 09 — Certifications &amp; teaching</span><div class="line"></div></div>
+<div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Sheet 09</b> / 10 — Certifications &amp; teaching</span><div class="line"></div></div>
 <section>
   <div class="two-col">
     <div>
@@ -641,7 +666,6 @@
       <div class="item-row"><p><strong>Physics, Math &amp; Chemistry Tutor</strong> — 4 years tutoring high school students, focused on conceptual understanding.</p></div>
       <div class="item-row"><p><strong>Lecturer, ANSYS Simplified Workshop</strong> — Team Automaestro; sessions on compressible flow in convergent-divergent nozzles and discrete phase modelling.</p></div>
       <div class="item-row"><p><strong>Mentor, Line Follower &amp; Trash Collector Robot Workshop</strong> — BUET Robotics Society; sensor integration, control systems, mechanical design.</p></div>
-      <div class="item-row"><p><strong>Industrial Trainee, NWPGCL</strong> — Mar 2025 — Bheramara 410 MW Combined Cycle Power Plant: gas–steam turbine coordination, instrumentation, troubleshooting.</p></div>
     </div>
   </div>
 </section>
@@ -649,7 +673,7 @@
 <!-- SHEET 9 — CONTACT / REFERENCES -->
 <div class="contact-band" id="contact">
   <div class="contact-inner">
-    <div class="eyebrow" style="margin-bottom:18px;">Sheet 09 / 09 — Contact</div>
+    <div class="eyebrow" style="margin-bottom:18px;">Sheet 10 / 10 — Contact</div>
     <h2 class="display">Let's talk research,<br>collaboration, or opportunities.</h2>
     <div class="hero-links">
       <a class="pill" href="mailto:mdluban@iastate.edu">mdluban@iastate.edu</a>
