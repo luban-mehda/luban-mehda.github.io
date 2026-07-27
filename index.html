@@ -155,7 +155,7 @@
   .section-lede{color:var(--ink-soft); max-width:640px; margin-bottom:44px; font-size:1.05rem;}
 
   /* ===== ABOUT ===== */
-  .about-grid{display:grid; grid-template-columns:1.4fr 0.6fr; gap:64px; align-items:start;}
+  .about-grid{display:grid; grid-template-columns:1fr 300px; gap:50px; align-items:start;}
   .interest-list{list-style:none; margin-top:26px;}
   .interest-list li{
     display:flex; gap:14px; padding:14px 0; border-top:1px solid var(--paper-line); align-items:baseline;
@@ -355,39 +355,59 @@
 <div class="sheet-marker"><span class="tick"></span><div class="line"></div><span class="label"><b>Page 02</b> / Education</span><div class="line"></div></div>
 <section id="education">
   <div class="about-grid">
+
+    <!-- LEFT COLUMN -->
     <div>
+
       <h2 class="section-title display">Education</h2>
 
       <div class="item-row" style="border-top:1px solid var(--paper-line); padding-top:18px;">
         <div class="title" style="font-size:1.15rem;">Incoming PhD Student, Mechanical Engineering</div>
         <span class="meta">Aug 2026 (Fall 2026)</span>
-        <p><a href="https://www.iastate.edu/" target="_blank" rel="noopener">Iowa State University</a>, Ames, IA, USA.</p>
+        <p><a href="https://www.iastate.edu/" target="_blank">Iowa State University</a>, Ames, IA, USA.</p>
       </div>
+
       <div class="item-row">
         <div class="title" style="font-size:1.15rem;">B.Sc., Mechanical Engineering</div>
         <span class="meta">Jan 2022 – Jun 2026</span>
-        <p><a href="https://www.buet.ac.bd/web/#/" target="_blank" rel="noopener">Bangladesh University of Engineering and Technology (BUET)</a>, Dhaka, Bangladesh.</p>
+        <p><a href="https://www.buet.ac.bd/web/#/" target="_blank">Bangladesh University of Engineering and Technology (BUET)</a>, Dhaka, Bangladesh.</p>
       </div>
-      <div>
-      <div style="border:1px solid var(--paper-line); background:var(--white); max-width:280px; margin-left:auto;">
-        <img src="images/thesis-submission.jpg" alt="Md Luban Mehda holding his submitted undergraduate thesis outside the BUET Department of Mechanical Engineering" style="width:100%; aspect-ratio:3/4; object-fit:cover; object-position:top; display:block;">
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); padding:9px 12px; border-top:1px solid var(--paper-line);">Undergraduate thesis submission, ME BUET</div>
-      </div>
+
       <div class="item-row">
         <div class="title" style="font-size:1.15rem;">Higher Secondary School</div>
         <span class="meta">Jul 2018 – Nov 2020</span>
-        <p>Dinajpur Government College</a>, Dinajpur, Bangladesh.</p>
+        <p>Dinajpur Government College, Dinajpur, Bangladesh.</p>
       </div>
+
       <div class="item-row">
         <div class="title" style="font-size:1.15rem;">Secondary School</div>
         <span class="meta">Jan 2010 – Feb 2018</span>
-        <p>Dinajpur Zilla School</a>, Dinajpur, Bangladesh.</p>
+        <p>Dinajpur Zilla School, Dinajpur, Bangladesh.</p>
       </div>
-        </div>
-    </div>
+
     </div>
 
-    
+    <!-- RIGHT COLUMN -->
+    <div>
+
+      <div style="border:1px solid var(--paper-line); background:var(--white);">
+
+        <img src="images/thesis-submission.jpg"
+             alt="Undergraduate thesis submission"
+             style="width:100%; aspect-ratio:3/4; object-fit:cover; object-position:top; display:block;">
+
+        <div style="font-family:'IBM Plex Mono',monospace;
+                    font-size:10.5px;
+                    color:var(--ink-soft);
+                    padding:9px 12px;
+                    border-top:1px solid var(--paper-line);">
+          Undergraduate thesis submission, ME BUET
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
